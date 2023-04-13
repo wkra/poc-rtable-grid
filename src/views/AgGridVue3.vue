@@ -55,7 +55,7 @@ checklist[4].comment = `change css variables or use greater specificity`
 checklist[5].status = false
 checklist[5].comment = 'https://www.ag-grid.com/license-pricing'
 checklist[6].status = false
-checklist[6].comment = 'In enterprice - https://www.ag-grid.com/javascript-data-grid/grouping/'
+checklist[6].comment = `In enterprice - https://www.ag-grid.com/javascript-data-grid/grouping/ , I'm not sure if that's what we expect`
 checklist[7].status = true
 checklist[7].comment =
   'You can redraw all or one row - click update first item to change first item stock value'
