@@ -10,7 +10,7 @@
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "deploy": "npm run build; git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
+    "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "ag-grid-community": "^29.2.0",
