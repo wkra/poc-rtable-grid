@@ -1,7 +1,7 @@
 <template>
   <h1>ag grid vue 3</h1>
-  <div><a href="https://www.npmjs.com/package/ag-grid-vue3" target="_blank">https://www.npmjs.com/package/ag-grid-vue3</a></div>
-  <div><a href="https://www.ag-grid.com/" target="_blank">https://www.ag-grid.com/</a></div>
+  <div><a href="https://www.npmjs.com/package/ag-grid-vue3" target="_blank">npm</a></div>
+  <div><a href="https://www.ag-grid.com/" target="_blank">home</a></div>
   <div style="padding-top: 20px">
     <button @click="onUpdateItem">Update first item stock</button>
     <ag-grid-vue
@@ -23,7 +23,6 @@ import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-alpine.css'
 import { AgGridVue } from 'ag-grid-vue3'
 import TaskChecklist from '@/components/TaskChecklist.vue'
-import { ref } from 'vue'
 import taskChecklist from '@/models/taskChecklist'
 import api from '@/services/api'
 import type { Product } from '@/services/api'
@@ -53,7 +52,8 @@ checklist[3].comment = `implemented - use 'Ctrl' or 'Command' on Apple and click
 checklist[4].status = true
 checklist[4].comment = `change css variables or use greater specificity`
 checklist[5].status = true
-checklist[5].comment = 'https://www.ag-grid.com/license-pricing, $999 Per Developer, $750 Per Application Production Environment'
+checklist[5].comment =
+  'https://www.ag-grid.com/license-pricing, $999 Per Developer, $750 Per Application Production Environment'
 checklist[6].status = false
 checklist[6].comment = `In enterprice - https://www.ag-grid.com/javascript-data-grid/grouping/ , I'm not sure if that's what we expect`
 checklist[7].status = true
@@ -66,14 +66,14 @@ checklist[10].comment = 'Not all is covered, but there is some typing'
 
 let gridApi: GridApi | null = null
 
-const columnDefs = ref([
+const columnDefs = [
   { field: 'id', resizable: true, width: 70, sortable: true },
   { field: 'title', resizable: true, sortable: true },
   { field: 'brand', resizable: true, sortable: true },
   { field: 'category', resizable: true, sortable: true },
   { field: 'stock', resizable: true, sortable: true },
   { field: 'rating', resizable: true, sortable: true }
-])
+]
 
 const setQueryParams = (sortModel: sortModelItem[]) => {
   if (sortModel.length) {
@@ -106,7 +106,8 @@ const onGridReady = (agGridParams: DetailGridInfo) => {
         console.log({ sortModel })
 
         const { products, total } = await api.fetchData(startRow, limit, queryParams)
-        params.successCallback(products, total)
+        const totalElements = endRow >= total ? total : -1
+        params.successCallback(products, totalElements)
       }
     }
     gridApi.setDatasource(dataSource)

@@ -7,9 +7,13 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/first-sample-grid">First sample grid</RouterLink>
-        <RouterLink to="/second-sample-grid">Second sample grid</RouterLink>
         <RouterLink to="/ag-grid-vue3">Ag Grid Vue3</RouterLink>
+        <RouterLink to="/vue3-easy-data-table">vue3-easy-data-table</RouterLink>
+        <RouterLink to="/vue-easy-table">vue-easy-table</RouterLink>
+        <RouterLink to="/revo-grid">RevoGrid</RouterLink>
+        <RouterLink to="/bryntum-grid">bryntum-grid</RouterLink>
+        <RouterLink to="/vue-handsontable">vue-handsontable</RouterLink>
+        <RouterLink to="/syncfusion">Syncfusion</RouterLink>
       </nav>
     </div>
   </header>

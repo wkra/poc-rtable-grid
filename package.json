@@ -13,6 +13,8 @@
     "deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@revolist/vue3-datagrid": "^3.2.17",
+    "@syncfusion/ej2-vue-grids": "^21.1.39",
     "ag-grid-community": "^29.2.0",
     "ag-grid-vue3": "^29.2.0",
     "vue": "^3.2.47",
