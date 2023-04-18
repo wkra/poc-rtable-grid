@@ -55,16 +55,16 @@ const addProducts = async () => {
 }
 
 const viewportscroll = (e: any) => {
-  console.log('viewportscroll', e)
+  // console.log('viewportscroll', e)
 }
 
-const refresh = async () => {
-  if (vgrid.value) {
-    await vgrid.value.$el.refresh()
-    console.log(await vgrid.value.$el.getColumns())
-    // this.$refs.vgrid.$el.refresh();
-  }
-}
+// const refresh = async () => {
+//   if (vgrid.value) {
+//     await vgrid.value.$el.refresh()
+//     console.log(await vgrid.value.$el.getColumns())
+//     // this.$refs.vgrid.$el.refresh();
+//   }
+// }
 
 const onUpdateItem = async () => {
   const source = await vgrid.value.$el.getSource()
